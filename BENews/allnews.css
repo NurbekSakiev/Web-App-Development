@@ -1,0 +1,85 @@
+.tab_section {
+	clear: both;
+	width: 600px;
+	margin-bottom: 25px;
+}
+
+.topnews {
+	float: left;
+	width: 200px;
+	padding-right: 10px;
+	margin-right: 10px;
+	border-right: 1px dotted #CCC;
+}
+.newslist {
+	float: left;
+	width: 350px;
+}
+
+.newslist ul{
+	clear: both;
+	margin: 0;
+	padding: 0 0 10px 20px;
+}
+.newslist li {
+	padding-bottom: 5px;
+}
+
+.newslist li a{
+	font-weight: bold;
+}
+
+.tabcontent_section {
+	clear: both;
+	float:left;
+	width:580px;
+	margin-bottom: 1em;
+	padding: 10px;
+	border: 1px solid #981b35;
+}
+
+.shadetabs{
+padding: 3px 0;
+margin-left: 0;
+margin-top: 1px;
+margin-bottom: 0;
+font: bold 12px Verdana;
+list-style-type: none;
+text-align: left; /
+}
+
+.shadetabs li{
+display: inline;
+margin: 0;
+}
+
+.shadetabs li a{
+text-decoration: none;
+position: relative;
+z-index: 1;
+padding: 3px 7px;
+margin-right: 3px;
+border: 1px solid #981b35;
+color: #FFFFFF;
+background: #750a20;
+}
+
+.shadetabs li a:visited{
+color: #FFFFFF;
+}
+
+.shadetabs li a:hover{
+text-decoration: underline;
+color: #FFFFFF;
+}
+
+.shadetabs li a.selected{ 
+color: #750a20;
+position: relative;
+top: 1px;
+}
+
+.shadetabs li a.selected{ 
+background-image: url(images/shadeactive.gif);
+border-bottom-color: white;
+}
