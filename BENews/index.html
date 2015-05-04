@@ -39,7 +39,53 @@
 				} else {
 				document.write("AM")
 				}
-				
+
+                function add_Link() {
+
+                    var full_link = document.getElementById("linkValue").value;
+                    var elem = document.createElement("img");
+                    var link = document.createElement('a');
+                    link.setAttribute("href", "http://"+full_link);
+                    
+                    elem.setAttribute("src", 'images/N.jpg');
+
+
+                    
+                    elem.setAttribute("id", "new_id");
+                    elem.setAttribute("height", "90");
+                    elem.setAttribute("width", "90");
+                    elem.setAttribute("alt", "Flower");
+                    link.appendChild(elem);
+                    document.getElementById("first").appendChild(link);
+                    
+                    //change_link(new_id, link);
+
+                }
+                function change_link(new_id, new_link) {
+                    document.getElementById(new_id).src = new_link;
+                }
+
+              
+
+/*
+                function myFunction() {
+                    var node = document.createElement("DIV");
+                    var textnode = document.createTextNode("Water");
+                    node.appendChild(textnode);
+                    document.getElementById("myList").appendChild(node);
+
+                    var link = document.getElementById("linkValue").value;
+                    var oImg=document.createElement("img");
+                    oImg.setAttribute('src', link);
+                    oImg.setAttribute('alt', 'na');
+                    oImg.setAttribute('height', '90');
+                    oImg.setAttribute('width', '90');
+                    document.body.appendChild(oImg);
+                }
+                */
+
+                //document.getElementById("button").addEventListener("click", add_Link, false);
+
 			</script>
         </div>
     </div>
@@ -60,7 +106,7 @@
             <div class="templatemo_leftcol_subcol">
                 <div id="templatemo_content">
 <!--NEWS Main Panel starts-->
-    <iframe width="600px" height="500px" src="images/wallpaper.jpg" name="iframe_x"></iframe>
+    <iframe width="600px" height="640px" src="images/wallpaper.jpg" name="iframe_x"></iframe>
             </div>
 <!--NEWS Main ends-->            
             <div class="tab_section">
@@ -98,33 +144,45 @@
                 <div> <span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:77001.1.99999&bannertypeclick=wu_bluestripes" title="Houston, Texas Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_bluestripes&airportcode=KHOU&ForcedCity=Houston&ForcedState=TX&zip=77001&language=EN" alt="Find more about Weather in Houston, TX" width="160" /></a><br></span </div>
 <!--WEATHER end-->
 
+
+        <form>
+          <fieldset>
+            <label for="linkValue"> Enter the link </label>
+            <input type="text" id="linkValue" />
+          </fieldset>
+          <fieldset>
+            <button type="button" id="button" onclick="add_Link()">Add the NEWS</button>
+          </fieldset>
+        </form>
+
 <!--WORLDWIDE news start-->
                     <div id="r_title"> <h1 style="font-family:Lucida Sans Unicode" style="color:white"> WORLDWIDE NEWS</h1> </div>
-                    <div class="video_box">
+                    <div id = "first" class="video_box">
                         <a href="http://www.bbc.com/news/world" target="iframe_x"> 
                         <img width="90" height="90"                    src="news_icons/bbc_world.jpeg" alt="image" />   </a>  
                     </div>
 
-                    <div class="video_box">
+                    <div id = "second" class="video_box">
                       <a href="http://www.nbcnews.com" target="iframe_x"> <img width="90" height="90"                    src="news_icons/nbc_world.jpg" alt="image" /> </a>    </div> 
 
-                    <div class="video_box">
+                    <div id = "third" class="video_box">
                        <a href="http://www.zamanamerika.com/kategori/dunya" target="iframe_x"> <img width="90" height="90"   src="news_icons/zaman.jpg" alt="image"/>
                        </a>                     
                     </div>
 
-                     <div class="video_box">
+                     <div id = "fourth" class="video_box">
                         <a href="http://www.nytimes.com/pages/world" target="iframe_x">  <img width="90" height="90" src="news_icons/ny_world.jpg" alt="image"/> </a> </div> 
 
-                    <div class="video_box">
+                    <div id = "fifth" class="video_box">
                         <a href="http://www.cbsnews.com/world/" target="iframe_x"> <img width="90" height="90"         src="news_icons/cnn_world.jpg" alt="image"/> </a> </div> 
 
-                    <div class="video_box">
+                    <div id = "sixth" class="video_box">
                         <a href="http://abcnews.go.com" target="iframe_x"> 
                         <img width="90" height="90"                    src="news_icons/yahoo_world.jpg" alt="image" />   </a>  
                     </div>
 <!--WORLDWIDE ends-->
                     ------------------------------------------------------------------------
+
                     ****************************************************************************************
 <!--Local news starts-->
                      <div id="templatemo_main_rightcol">
