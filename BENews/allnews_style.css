@@ -11,12 +11,6 @@ a:link, a:visited { color: #750a20; text-decoration: none;}
 a:active, a:hover { color: #FF0000;}
 
 
-.updatedtime {
-	font-size: 10px;
-	font-weight: bold;
-	color: #FF0000;
-}
-
 .view_all a{
 	clear: both;
 	display: block;
@@ -39,50 +33,12 @@ a:active, a:hover { color: #FF0000;}
 	height: 100px;
 	margin: 0px;
 	color: #FFF;
-	background: #0066FF no-repeat;
+	background: #FFFFFF no-repeat;
 }
 
 #templatemo_sitetitle {
 	float: left;
 	
-}
-
-#templatemo_searchbox {
-	float: left;
-	width: 320px;
-	margin: 40px 0 0 15px;
-}
-
-#templatemo_searchbox form {
-	margin: 0px;
-	padding: 0px;
-}
-
-#searchfield{
-	background:#FFFFFF;
-	border: none;
-	color: #000;
-	font-size: 13px;
-	font-variant: normal;
-	height: 16px;
-	line-height: normal;
-	padding: 4px;
-	width: 200px;
-}
-
-#searchbutton{
-	background: url(images/templatemo_search_button.gif); 
-	border: none;
-	cursor: pointer;
-	font-size: 12px;
-	font-weight: bold;
-	height: 24px;
-	margin: 0 0 0 7px;
-	padding: 0 6px;
-	text-align: center;
-	vertical-align: bottom;
-	white-space: pre;
-	width: 66px;
 }
 
 #templatemo_currentdate {
@@ -91,13 +47,14 @@ a:active, a:hover { color: #FF0000;}
 	margin: 70px 15px 0 0;
 	text-align: right;
 	font-weight: bold;
+	color:#256EB8
 }
 
 #templatemo_menu {
 	float: left;
 	width: 1000px;
 	height: 30px;
-	background: #000066 url(images/templatemo_menu_bg.gif) repeat-x;
+	background: #000066;
 	border-bottom: 1px solid #333;
 }
 
@@ -133,11 +90,6 @@ a:active, a:hover { color: #FF0000;}
 	width: 1000px;
 }
 
-#templatemo_main_leftcol {
-	float: left;
-	width: 630px;
-	margin-top: 15px;
-}
 
 .templatemo_leftcol_subcol {
 	float: left;
@@ -150,13 +102,6 @@ a:active, a:hover { color: #FF0000;}
 	float: right;
 	margin-top: 15px;
 	width: 370px;
-}
-
-#templatemo_topnews {
-	display: block;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	border-bottom: 1px dotted #cccccc;
 }
 
 * html #templatemo_video_section {

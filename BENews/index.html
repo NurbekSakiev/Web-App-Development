@@ -7,15 +7,15 @@
 <script type="text/javascript" src="allnews.js">
 </script>
 </head>
-<body>
+<body background = "images/cnn_background.jpg">
 <div id="templatemo_container">
 
-	<div id="templatemo_top_panel">
+	<div id="templatemo_top_panel" >
         <div id="templatemo_sitetitle">
             <img height="100px" width="170px" src="images/BENnews.png"/>
         </div>
         
-        <div id="templatemo_currentdate">
+        <div id="templatemo_currentdate" >
 			<script type="text/javascript">
 				<!--
 				var m_names = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
@@ -23,7 +23,7 @@
 				
 				var currentTime = new Date()
 				var day = currentTime.getDay()
-				var month = currentTime.getMonth() 
+				var month = currentTime.getMonth() + 1
 				var date = currentTime.getDate()
 				var year = currentTime.getFullYear()
 				document.write( d_names[day] + ", " + date + " " + m_names[month] + " " + year + ", ")
@@ -39,8 +39,7 @@
 				} else {
 				document.write("AM")
 				}
-
-                function add_Link() {
+				function add_Link() {
 
                     var full_link = document.getElementById("linkValue").value;
                     var elem = document.createElement("img");
@@ -48,21 +47,29 @@
                     link.setAttribute("href", "http://"+full_link);
                     
                     elem.setAttribute("src", 'images/N.jpg');
-
-
                     
                     elem.setAttribute("id", "new_id");
                     elem.setAttribute("height", "90");
                     elem.setAttribute("width", "90");
-                    elem.setAttribute("alt", "Flower");
+                    elem.setAttribute("alt", "News");
                     link.appendChild(elem);
                     document.getElementById("first").appendChild(link);
+                    into_iframe();
                     
-                    //change_link(new_id, link);
 
                 }
-                function change_link(new_id, new_link) {
-                    document.getElementById(new_id).src = new_link;
+                function into_iframe() {
+                    var name = document.getElementsByName("iframe_x");
+                    document.getElementById("new_id").target = "_blank";
+                    
+                    
+            
+
+                    //var el = document.getElementById("new_id");
+                    //var link = el.createElement('a');
+                    //link.setAttribute("target", "_blank");
+                    //link.appendChild(el);
+
                 }
 
               
@@ -83,9 +90,7 @@
                     document.body.appendChild(oImg);
                 }
                 */
-
                 //document.getElementById("button").addEventListener("click", add_Link, false);
-
 			</script>
         </div>
     </div>
@@ -93,27 +98,26 @@
     <div id="templatemo_menu">
         <ul>
             <li><a href="index.html"  class="current">Home</a></li>
-                       
+            <li><a href="#">Daily News</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">Business</a></li>  
+            <li><a href="#">Politics</a></li> 
+            <li><a href="#">Entertainment</a></li>                     
+            <li><a href="#">Technology &amp; Science</a></li>            
         </ul> 
 	</div>
-    
-	<div id="templatemo_content">
-
-    </div> 
+  
         	
 
 
             <div class="templatemo_leftcol_subcol">
                 <div id="templatemo_content">
 <!--NEWS Main Panel starts-->
-    <iframe width="600px" height="640px" src="images/wallpaper.jpg" name="iframe_x"></iframe>
+    <iframe width="600px" height="600px" src="images/news_demo.jpg" name="iframe_x" style="border: medium ridge blue"></iframe>
             </div>
 <!--NEWS Main ends-->            
             <div class="tab_section">
-                <ul id="countrytabs" class="shadetabs">
-                    <li><a href="#" rel="home" class="selected">Home</a></li>
                 
-				</ul>
 				
                 <div class="tabcontent_section">
                     <div id="health" class="tabcontent">
@@ -125,10 +129,7 @@
                     </div>
 			    </div>
 
-			<script type="text/javascript">
-            
-            var c
-           </script>
+			
 
             </div>
     	</div> 
@@ -141,10 +142,10 @@
 
 
 <!--WEATHER start-->
-                <div> <span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:77001.1.99999&bannertypeclick=wu_bluestripes" title="Houston, Texas Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_bluestripes&airportcode=KHOU&ForcedCity=Houston&ForcedState=TX&zip=77001&language=EN" alt="Find more about Weather in Houston, TX" width="160" /></a><br></span </div>
+                <div> <span style="display: block !important; width: 180px; text-align: center; font-family: sans-serif; font-size: 12px;"><a href="http://www.wunderground.com/cgi-bin/findweather/getForecast?query=zmw:77001.1.99999&bannertypeclick=wu_bluestripes" title="Houston, Texas Weather Forecast" target="_blank"><img src="http://weathersticker.wunderground.com/weathersticker/cgi-bin/banner/ban/wxBanner?bannertype=wu_bluestripes&airportcode=KHOU&ForcedCity=Houston&ForcedState=TX&zip=77001&language=EN" alt="Find more about Weather in Houston, TX" width="160" /></a><br></span> </div>
 <!--WEATHER end-->
 
-
+<!--ADDING NEWS start-->
         <form>
           <fieldset>
             <label for="linkValue"> Enter the link </label>
@@ -154,6 +155,8 @@
             <button type="button" id="button" onclick="add_Link()">Add the NEWS</button>
           </fieldset>
         </form>
+<!--ADDING NEWS end-->
+
 
 <!--WORLDWIDE news start-->
                     <div id="r_title"> <h1 style="font-family:Lucida Sans Unicode" style="color:white"> WORLDWIDE NEWS</h1> </div>
@@ -182,7 +185,6 @@
                     </div>
 <!--WORLDWIDE ends-->
                     ------------------------------------------------------------------------
-
                     ****************************************************************************************
 <!--Local news starts-->
                      <div id="templatemo_main_rightcol">
@@ -218,6 +220,19 @@
             <div class="templatemo_rcol_sectionwithborder">
             	<div id="templatemo_newsletter_section">
                     <h2>Subscribe News</h2>
+                    <form method="get" action="#">
+                        <div class="form_row">	
+                        <label>Choose Newsletter</label>
+                        <select>
+                            <option>Daily News</option>
+                            <option>Breaking News</option>
+                            <option>Sport News</option>                        
+                            <option>Entertainment News</option>                        
+                        </select>
+                        </div>
+                        <div class="form_row"><label>Email address</label><input class="inputfield" name="email_address" type="text" id="email_addremss"/></div>
+                       <input class="button" type="submit" name="Submit" value="Subscribe" />
+                    </form>
 				</div>
             </div> 
         </div>
